@@ -1,4 +1,4 @@
-function getword(info,tab) {
+function ContextAction(info,tab) {
   chrome.tabs.create({
     url: "http://www.google.com/search"
   });
@@ -7,11 +7,11 @@ function getword(info,tab) {
 chrome.contextMenus.create({
   title: "Block This Site",
   contexts:["all"],
-  onclick: getword
+  onclick: ContextAction
 });
 
 chrome.contextMenus.create({
   title: "Only Hide This Page",
   contexts:["all"],
-  onclick: getword
+  onclick: ContextAction
 });
